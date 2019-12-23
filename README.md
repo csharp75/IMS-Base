@@ -1,15 +1,42 @@
-# IMS starter
+# IMS Base
 
-A small project starter kit.
+Management system project starter kit.
 
 - NPM scripts
-- Module bundling with [Parcel](https://parceljs.org/)
-- Image optimisation (via Parcel’s [imagemin](https://github.com/DeMoorJasper/parcel-plugin-imagemin) plugin)
-- SVG icon sprite creation (via Parcel’s [svg-sprite](https://github.com/Epimodev/parcel-plugin-svg-sprite))
-- Node Sass
+- SVG icon sprite creation (via Fabrice Weinberg’s [svgstore](https://github.com/FWeinb/grunt-svgstore))
+- Node Sass compiles .scss files to CSS
+- Browsersync - run a local server and live reload the browser when files change
+- Autoprefix CSS with PostCSS & Autoprefixer
+- Javascript Linting with [eslint](https://github.com/eslint/eslint)
+- Combine and minifying JavaScript files with [uglify-js](https://github.com/mishoo/UglifyJS2)
+- Image optimisation (via [imagemin-cli](https://github.com/imagemin/imagemin-cli) plugin)
+- Watch for changes and combine tasks with [onchange](https://www.npmjs.com/package/onchange) and [npm-run-all](https://www.npmjs.com/package/npm-run-all)
 
-## Install:
+Work in progress.
 
-```
-npm install
-```
+---
+
+## ITCSS
+
+The project CSS is structured using ITCSS (Inverted Triangle CSS) principles A scalable and maintainable CSS architecture for large projects. One of the key principles of ITCSS is that it separates your CSS codebase to several sections (called layers), which take the form of the inverted triangle:
+
+- **Settings** – used with preprocessors and contain font, colors definitions, etc.
+- **Tools** – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+- **Generic** – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+- **Elements** – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here
+- **Objects** – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+- **Components** – specific UI components. This is where the majority of our work takes place and our UI components are often composed of Objects and Components
+- **Utilities** – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+
+More info [ITCSS: Scalable and Maintainable CSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+
+---
+
+## BEMIT
+
+CSS rules are written using the BEM (Block, Element, Modifier) naming convention. A front-end naming methodology thought up by the guys at Yandex. It is a smart way of naming your CSS classes to give them more transparency and meaning to other developers.
+
+> By combining BEM with the Inverted Triangle CSS architecture we can extend the syntax using Namespacing and other patterns to give it richer meaning across development teams.
+
+Harry Roberts - ['BEMIT: Taking the BEM Naming Convention a Step Further'](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
+
