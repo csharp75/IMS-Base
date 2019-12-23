@@ -1,0 +1,69 @@
+/* --------------------------------------------------------------------
+  Buttons
+----------------------------------------------------------------------*/
+
+%button-base {
+  @include animation(#{background-color, border-color}, fast, in);
+  @include focus;
+  background: transparent;
+  border: none;
+  border-radius: $border-radius-m;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: $font-size-s;
+  font-weight: $font-weight-regular;
+  justify-content: center;
+  line-height: $font-line-height-reset;
+  margin: 0 0 $space-stack-m 0;
+  padding: $space-inset-squish-l;
+  text-align: center;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.c-btn {
+  @extend %button-base;
+  background: $color-bg-cta-default;
+  color: $color-text-inverse;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: $color-bg-cta-default-hover;
+  }
+}
+
+.c-btn-basic {
+  @extend %button-base;
+  background: $color-bg-cta-link;
+  color: $color-primary;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $color-text-link-hover;
+  }
+}
+
+.c-btn-primary {
+  @extend %button-base;
+  background: $color-bg-cta-primary;
+  color: $color-text-inverse;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: $color-bg-cta-primary-hover;
+  }
+}

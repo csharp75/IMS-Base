@@ -1,0 +1,9 @@
+// SVG Icons inherit colour - https://osvaldas.info/keeping-css-short-with-currentcolor
+svg {
+  fill: currentColor;
+}
+
+.icon-edit {
+  height: 24px;
+  width: 24px;
+}

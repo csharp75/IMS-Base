@@ -1,0 +1,165 @@
+// -----------------------------------------------------------------
+// Clearfix
+// -----------------------------------------------------------------
+@mixin group() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+// -----------------------------------------------------------------
+// box-sizing
+// -----------------------------------------------------------------
+
+@mixin bs($bs-type: $defined-bs-type) {
+	-webkit-box-sizing: $bs-type;
+	-moz-box-sizing: $bs-type;
+	box-sizing: $bs-type;
+}
+
+// -----------------------------------------------------------------
+// Adds visual focus to elements on :focus
+// -----------------------------------------------------------------
+@mixin focus($color: $color-focus, $width: $bar-thickness, $has-validation: false) {
+  &:focus {
+    outline: $width solid $color;
+    outline-offset: -#{$width};
+  }
+  @if ($has-validation) {
+    .is-error &:focus {
+      outline-color: $color-error;
+    }
+
+    .is-caution &:focus {
+      outline-color: $color-warning;
+    }
+
+    .is-success &:focus {
+      outline-color: $color-success;
+    }
+  }
+}
+
+// -----------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------
+
+// Text crop - rid components of that pesky space above and below a block of text due to line height
+@mixin text-crop($line-height: 1.3, $top-adjustment: 0px, $bottom-adjustment: 0px) {
+  // Configured in Step 1
+  $top-crop: 8;
+  $bottom-crop: 9;
+  $crop-font-size: 36;
+  $crop-line-height: 1.2;
+
+  // Apply values to calculate em-based margins that work with any font size
+  $dynamic-top-crop: max(($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+  $dynamic-bottom-crop: max(($bottom-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+
+  // Mixin output
+  line-height: $line-height;
+
+  &::before,
+  &::after {
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+  }
+
+  &::before {
+      margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment});
+  }
+
+  &::after {
+      margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
+  }
+}
+// Mixin generated at: http://text-crop.eightshapes.com/?typeface-selection=google-font&typeface=Roboto&custom-typeface-name=Helvetica&custom-typeface-url=&custom-typeface-weight=400&custom-typeface-style=normal&weight-and-style=100&size=36&line-height=1.2&top-crop=8&bottom-crop=9
+
+
+// -----------------------------------------------------------------
+// Pill shaped buttons
+// -----------------------------------------------------------------
+
+@mixin button-links($button-base: darken($color11,10%),$button-hover: darken($color11,15%)) {
+	border: 1px solid darken($color11,16%);
+	padding: .3em .6em;
+	margin-left: .7em;
+	@include border-radius(8px);
+	@include text-shadow(0 1px 2px $color11);
+	color: lighten($color10,50%);
+	background-color: $button-base;
+	&:hover {
+		background-color: $button-hover;
+	}
+}
+
+// -----------------------------------------------------------------
+// Visually hidden content
+// -----------------------------------------------------------------
+@mixin v-h {
+	border: 0;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  white-space: nowrap;
+}
+
+// -----------------------------------------------------------------
+// ::before & ::after pseudo
+// -----------------------------------------------------------------
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// -----------------------------------------------------------------
+// Forms - Placeholder
+// -----------------------------------------------------------------
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+// -----------------------------------------------------------------
+// Media Queries
+// -----------------------------------------------------------------
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+      $width: map_get($breakpoints, $width);
+      @if $type == max {
+          $width: $width - 1px;
+      }
+      @media only screen and (#{$type}-width: $width) {
+          @content;
+      }
+  }
+}
+
+// -----------------------------------------------------------------
+// Animation
+// -----------------------------------------------------------------
+@mixin animation($property: all, $duration: brisk, $easing: out) {
+  transition-duration: map-get($animation-duration, $duration);
+  transition-property: $property;
+  transition-timing-function: map-get($animation-easing, $easing);
+}
+
+// -----------------------------------------------------------------
+// Rem size with px fallback for IE8 support
+// -----------------------------------------------------------------
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: rem($size);
+}

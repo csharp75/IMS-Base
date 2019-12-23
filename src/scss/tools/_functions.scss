@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------
+// Z-Index function
+// -----------------------------------------------------------------
+@function z($keys) {
+  $value: $z-indexes;
+
+  @each $key in $keys {
+    $value: map-get($value, $key);
+  }
+
+  @return $value;
+}
+
+// -----------------------------------------------------------------
+// Calculate Rem Size - http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+// -----------------------------------------------------------------
+@function rem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}

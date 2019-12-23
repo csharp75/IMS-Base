@@ -1,0 +1,36 @@
+{
+  "name": "ims-base",
+  "version": "1.0.0",
+  "description": "Management system base",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --output-style expanded -o dist/css src/scss",
+    "serve": "browser-sync start --server --files 'dist/css/*.css, **/*.html'",
+    "watch:css": "onchange \"src/scss\" -- npm run scss",
+    "start": "npm-run-all -p scss serve watch:css",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "lint": "eslint js",
+    "uglify": "mkdir -p dist/js && uglifyjs js/*.js -m -o dist/js/main.js",
+    "imagemin": "imagemin img dist/img -p",
+    "icons": "svgo -f icons && mkdir -p dist/icons && svg-sprite-generate -d icons -o dist/icons/icons-sprite.svg"
+  },
+  "author": "Chris Sharp",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.7.2",
+    "grunt-svgstore": "^2.0.0",
+    "imagemin-cli": "^5.1.0",
+    "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.1.0",
+    "postcss-cli": "^6.1.3",
+    "svg-sprite-generator": "0.0.7",
+    "svgo": "^1.3.2",
+    "uglify-js": "^3.7.2"
+  },
+  "dependencies": {
+    "grunt": "~0.4.5"
+  }
+}

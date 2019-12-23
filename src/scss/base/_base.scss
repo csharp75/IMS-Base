@@ -1,0 +1,18 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+// Set base font-size
+body {
+    font-size: $font-size-base;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    padding: 2em;
+}
+
+// Make images easier to work with
+img {
+    max-width: 100%;
+    display: block;
+}

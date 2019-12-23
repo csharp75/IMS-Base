@@ -1,0 +1,159 @@
+/* --------------------------------------------------------------------
+  Responsive Data Table
+----------------------------------------------------------------------*/
+
+table,
+.c-table {
+  border-top: $border-table;
+  width: 100%;
+  table-layout: fixed;
+  font-size: $font-size-xs;
+  margin: $space-stack-l;
+
+  @media (--mq-medium) {
+    font-size: $font-size-s;
+    margin-bottom: $space-stack-m;
+  }
+}
+
+table caption,
+.c-table caption {
+  font-weight: normal;
+  text-align: left;
+}
+
+table th,
+.c-table th {
+  font-weight: bold;
+}
+
+table th,
+.c-table th,
+table td,
+.c-table td {
+  padding: $space-inset-stretch-m;
+  text-align: left;
+  vertical-align: top;
+}
+
+table thead,
+.c-table thead {
+  border-bottom: 2px solid $color-table-border;
+}
+
+table tbody td,
+.c-table thead td,
+table tbody th,
+.c-table thead th {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid $color-table-border;
+  }
+}
+
+table ul,
+.c-table ul {
+  margin-bottom: 0;
+}
+
+.c-table--responsive th,
+.c-table--responsive td {
+  @media (max-width: 46.875em) {
+    padding-top: $space-inset-s;
+    padding-bottom: $space-inset-s;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+}
+
+.c-table--responsive thead,
+.c-table--responsive tfoot {
+  @media (max-width: 46.875em) {
+    border-bottom: 0;
+  }
+}
+
+.c-table--responsive thead th,
+.c-table--responsive thead td,
+.c-table--responsive tfoot th,
+.c-table--responsive tfoot td {
+  @media (max-width: 46.875em) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    letter-spacing: 0;
+  }
+}
+
+.c-table--responsive tbody th {
+  @media (max-width: 46.875em) {
+    border-bottom: 2px solid $color-table-border;
+    display: block;
+    /*border-top: 2px solid $color-table-border;*/
+    font-size: $font-size-m;
+    margin-top: $space-m;
+  }
+}
+
+.c-table--responsive_hidden {
+  @media (max-width: 46.875em) {
+    display: none;
+  }
+}
+
+.c-table--responsive tbody td {
+  @media (max-width: 46.875em) {
+    display: block;
+    border-bottom: 0;
+
+    &:before {
+      content: attr(data-th) "";
+      vertical-align: top;
+      font-weight: $font-weight-bold;
+      /* Should be amended with a custom value... */
+      width: 40%;
+      display: inline-block;
+    }
+  }
+}
+
+.c-table--responsive tbody th::after {
+  @media (max-width: 46.875em) {
+    border-bottom: 0;
+  }
+}
+
+.c-table--responsive tbody ul {
+  @media (max-width: 46.875em) {
+    display: inline-block;
+    margin-left: -5px;
+  }
+}
+
+.c-table--responsive tbody a {
+  @media (max-width: 46.875em) {
+    margin-left: -5px;
+  }
+}
+
+.c-table__header {
+  padding: 1rem 0 0 0;
+  margin-bottom: 0;
+
+  @media (max-width: 46.875em) {
+    padding: 1rem 0.5rem 0.8rem 0.5rem;
+  }
+}

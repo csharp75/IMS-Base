@@ -1,0 +1,19 @@
+// Box-sizing
+$defined-bs-type: border-box !default;
+
+// @ type map
+$z-indexes: (
+  deepdive: -99999px,
+  default: 1,
+  dialog: 6000,
+  dropdown: 7000,
+  modal: 9000,
+  overlay: 8000,
+  spinner: 9050,
+  sticky: 100
+);
+
+// Focus on outline
+$color-focus: orange;
+$bar-thickness: 2px;
+
