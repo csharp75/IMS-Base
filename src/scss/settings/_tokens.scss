@@ -254,6 +254,20 @@ $mq-l: 1200px;
 // Time
 // --------------------------------------------------------------------
 
+$duration-immediately: 0.05s;
+$duration-quickly: 0.2s;
+$duration-slowly: 0.4s;
+
+// --------------------------------------------------------------------
+// Motion
+// --------------------------------------------------------------------
+// https://easings.net/en#easeInOutQuart
+// https://sproutsocial.com/seeds/visual/motion
+
+$motion-natural: cubic-bezier(0.77, 0, 0.175, 1);
+$moton-ease-in: cubic-bezier(.4, 0, .7, .2);
+$motion-ease-out: cubic-bezier(0, 0, .2, 1);
+$motion-ease-inout: cubic-bezier(.4, 0, .2, 1);
 
 // --------------------------------------------------------------------
 // Size (Height & width)
