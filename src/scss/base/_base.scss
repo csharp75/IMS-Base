@@ -1,9 +1,15 @@
-/* Box sizing rules */
+/* --------------------------------------------------------------------
+  Box sizing
+----------------------------------------------------------------------*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+/* --------------------------------------------------------------------
+  Body
+----------------------------------------------------------------------*/
 // Set base font-size
 body {
     font-size: $font-size-base;
@@ -11,8 +17,35 @@ body {
     padding: 2em;
 }
 
+/* --------------------------------------------------------------------
+  Images
+----------------------------------------------------------------------*/
 // Make images easier to work with
 img {
-    max-width: 100%;
-    display: block;
+  display: block;  
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------
+  Table
+----------------------------------------------------------------------*/
+caption {
+  font-weight: $font-weight-bold;
+  text-align: left;
+  margin: $space-stack-default;
+}
+
+table {
+  font-size: $font-size-base;
+  width: 100%;
+  text-align: left;
+  thead,
+  tbody,
+  tfoot {
+    td,
+    th {
+      padding: $space-inset-stretch-s;
+      border-bottom: $border-table;
+    }
+  }
 }

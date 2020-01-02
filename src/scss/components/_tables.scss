@@ -1,31 +1,4 @@
 /* --------------------------------------------------------------------
-  Base Table
-----------------------------------------------------------------------*/
-
-caption {
-  font-weight: $font-weight-bold;
-  text-align: left;
-  margin: $space-stack-default;
-}
-table {
-  font-size: $font-size-base;
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  margin: 0;
-  text-align: left;
-  thead,
-  tbody,
-  tfoot {
-    td,
-    th {
-      padding: $space-inset-stretch-s;
-      border-bottom: $border-table;
-    }
-  }
-}
-
-/* --------------------------------------------------------------------
   Responsive Data Table
 ----------------------------------------------------------------------*/
 
