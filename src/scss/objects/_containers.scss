@@ -1,8 +1,13 @@
 // -----------------------------------------------------------------
 // Base containers
 // -----------------------------------------------------------------
-.container, .container-full {
+.o-container, .o-container-full {
   background-color: $color-bg-light;
   margin-left: auto;
   margin-right: auto;
+}
+
+// Media object
+.o-media {
+  background-color: $color-bg-light;
 }

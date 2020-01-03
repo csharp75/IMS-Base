@@ -1,5 +1,371 @@
 // -----------------------------------------------------------------
-// Hiding content
+// Alignment
+// -----------------------------------------------------------------
+
+.u-align--baseline {
+  vertical-align: baseline !important;
+}
+.u-align--top {
+  vertical-align: top !important;
+}
+.u-align--middle {
+  vertical-align: middle !important;
+}
+.u-align--bottom {
+  vertical-align: bottom !important;
+}
+
+// Absolutely center something
+.u-align--absolute-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  margin: auto !important;
+}
+
+// -----------------------------------------------------------------
+// Borders
+// -----------------------------------------------------------------
+.u-border {
+  border: 1px solid $color-border !important;
+}
+.u-border--top {
+  border-top: 1px solid $color-border !important;
+}
+.u-border--right {
+  border-right: 1px solid $color-border !important;
+}
+.u-border--bottom {
+  border-bottom: 1px solid $color-border !important;
+}
+.u-border--left {
+  border-left: 1px solid $color-border !important;
+}
+.u-border--0 {
+  border: 0 none !important;
+}
+
+.u-circle  { border-radius: 50%; }
+
+// -----------------------------------------------------------------
+// Clearfix
+// -----------------------------------------------------------------
+
+.u-clearfix {
+  @include group;
+}
+
+// -----------------------------------------------------------------
+// Display
+// -----------------------------------------------------------------
+
+.u-inline {
+  display: inline !important;
+}
+
+.u-inline-block {
+  display: inline-block !important;
+}
+
+.u-block {
+  display: block !important;
+}
+
+.u-table {
+  display: table !important;
+}
+
+.u-table-cell {
+  display: table-cell !important;
+}
+
+// -----------------------------------------------------------------
+// Flexbox
+// -----------------------------------------------------------------
+
+// -----------------------------------------------------------------
+// Floats
+// -----------------------------------------------------------------
+.u-float-right {
+  float: right !important;
+
+  &--small {
+    @media (max-width: $mq-s) {
+      float: right !important;
+    }
+  }
+
+  &--medium {
+    @media (min-width: $mq-m) and (max-width: $mq-l) {
+      float: right !important;
+    }
+  }
+
+  &--large {
+    @media (min-width: $mq-l) {
+      float: right !important;
+    }
+  }
+}
+
+.u-float-left {
+  float: left !important;
+
+  &--small {
+    @media (max-width: $mq-s) {
+      float: left !important;
+    }
+  }
+
+  &--medium {
+    @media (min-width: $mq-m) and (max-width: $mq-l) {
+      float: left !important;
+    }
+  }
+
+  &--large {
+    @media (min-width: $mq-l) {
+      float: left !important;
+    }
+  }
+}
+
+.u-float--0 {
+  float: none !important;
+}
+
+// -----------------------------------------------------------------
+// Layout
+// -----------------------------------------------------------------
+
+// Fit content to container width
+.u-fit { max-width: 100%; }
+
+// -----------------------------------------------------------------
+// Margin
+// -----------------------------------------------------------------
+
+// Remove top or bottom margin from a container so flush 
+// with component above or below
+
+.u-top-magnet {
+  margin-top: 0 !important;
+  border-top-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+}
+
+.u-bottom-magnet {
+  margin-bottom: 0 !important;
+  border-bottom-left-radius: 0!important;
+  border-bottom-right-radius: 0!important;
+}
+
+// Collapse margins
+.u-m-0 {
+  margin: 0 !important;
+
+  &--top {
+    margin-top: 0 !important;
+  }
+
+  &--right {
+    margin-right: 0 !important;
+  }
+
+  &--bottom {
+    margin-bottom: 0 !important;
+  }
+
+  &--left {
+    margin-left: 0 !important;
+  }
+}
+
+// -----------------------------------------------------------------
+// Off-screen
+// -----------------------------------------------------------------
+
+.u-off-screen {
+  height: 1px !important;
+  left: -10000px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  top: auto !important;
+  width: 1px !important;
+}
+
+// -----------------------------------------------------------------
+// Overflow
+// -----------------------------------------------------------------
+
+.u-overflow-hidden {
+  overflow: hidden !important;
+}
+
+.u-overflow-scroll {
+  overflow: scroll !important;
+}
+
+.u-overflow-auto {
+  overflow: auto !important;
+}
+
+// -----------------------------------------------------------------
+// Padding
+// -----------------------------------------------------------------
+
+// Padding collapse
+.u-p-0 {
+  padding: 0 !important;
+
+  &--top {
+    padding-top: 0 !important;
+  }
+
+  &--right {
+    padding-right: 0 !important;
+  }
+
+  &--bottom {
+    padding-bottom: 0 !important;
+  }
+
+  &--left {
+    padding-left: 0 !important;
+  }
+}
+
+// -----------------------------------------------------------------
+// Position
+// -----------------------------------------------------------------
+
+// Position a container relative to the viewport
+.u-is-fixed {
+  position: fixed !important;
+}
+
+// Position a container relative to its closest ancestor with relative positioning
+.u-is-relative {
+  position: relative !important;
+}
+
+// Contain children if children are absolutely positioned and out of flow
+.u-is-absolute {
+  position: absolute !important;
+}
+
+// Resets positioning of element back to normal behavior
+.u-is-static {
+  position: static !important;
+}
+
+// For absolute positioning within a relatively positioned element
+.u-top-0    { top: 0; }
+.u-right-0  { right: 0; }
+.u-bottom-0 { bottom: 0; }
+.u-left-0   { left: 0; }
+
+// Z-Index
+.u-z-deepdive { z-index: $z-index-deepdive; }
+.u-z-default { z-index: $z-index-default; }
+.u-z-dialog { z-index: $z-index-dialog; }
+.u-z-dropdown { z-index: $z-index-dropdown; }
+.u-z-modal { z-index: $z-index-modal; }
+.u-z-overlay { z-index: $z-index-overlay; }
+.u-z-spinner { z-index: $z-index-spinner; }
+.u-z-sticky { z-index: $z-index-sticky; }
+
+// -----------------------------------------------------------------
+// Print
+// -----------------------------------------------------------------
+// Hide a component when printing a page
+@media print {
+  .u-print--0 {
+    display: none !important;
+  }
+}
+
+// -----------------------------------------------------------------
+// Show
+// -----------------------------------------------------------------
+// Show an element within a certain breakpoint.
+.u-show {
+  display: inherit !important;
+
+  &--small {
+    @media screen and (max-width: $mq-m) {
+      display: inherit !important;
+    }
+  }
+
+  &--medium {
+    @media (min-width: $mq-m) and (max-width: $mq-l) {
+      display: inherit !important;
+    }
+  }
+
+  &--large {
+    @media screen and (min-width: $mq-l) {
+      display: inherit !important;
+    }
+  }
+}
+
+// -----------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------
+
+// Weights
+.u-text-bold {
+  font-weight: $font-weight-bold;
+}
+
+.u-text-regular {
+  font-weight: $font-weight-regular;
+}
+
+.u-text-caps {
+  letter-spacing: $font-letter-spacing-s;
+  text-transform: uppercase !important;
+}
+
+// Text Size
+.u-text--small {
+  font-size: $font-size-xs;
+}
+
+// Text Alignment
+.u-text-align--center {
+  text-align: center !important;
+}
+
+.u-text-align--left {
+  text-align: left !important;
+}
+
+.u-text-align--right {
+  text-align: right !important;
+}
+
+// Truncate text.
+// Element has to have a fixed width
+.u-truncate {
+  max-width: 100%;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+// Reset list style
+.u-list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+// -----------------------------------------------------------------
+// Visibility
 // -----------------------------------------------------------------
 
 // Assistive text - https://www.w3.org/TR/WCAG20-TECHS/C7.html
@@ -60,39 +426,4 @@
  */
 .skip-link:focus {
   transform: translateY(0em);
-}
-
-// -----------------------------------------------------------------
-// Borders
-// -----------------------------------------------------------------
-.u-border {
-  border: 1px solid $color-border !important;
-}
-.u-border-top {
-  border-top: 1px solid $color-border !important;
-}
-.u-border-right {
-  border-right: 1px solid $color-border !important;
-}
-.u-border-bottom {
-  border-bottom: 1px solid $color-border !important;
-}
-.u-border-left {
-  border-left: 1px solid $color-border !important;
-}
-.u-border-0 {
-  border: 0 none !important;
-}
-
-// -----------------------------------------------------------------
-// Floats
-// -----------------------------------------------------------------
-.u-float-left {
-  float: left !important;
-}
-.u-float-right {
-  float: right !important;
-}
-.u-float-0 {
-  float: none !important;
 }
