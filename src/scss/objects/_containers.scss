@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------
 .o-container, .o-container-full {
   background-color: $color-bg-light;
+  box-shadow: $shadow-s;
   margin-left: auto;
   margin-right: auto;
 }
@@ -10,4 +11,9 @@
 // Media object
 .o-media {
   background-color: $color-bg-light;
+}
+
+.o-container--table {
+  background: $color-bg-light;
+  padding: $space-l;
 }

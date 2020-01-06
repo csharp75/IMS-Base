@@ -12,6 +12,7 @@
 ----------------------------------------------------------------------*/
 // Set base font-size
 body {
+    background: $color-bg;
     font-size: $font-size-base;
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     padding: 2em;
@@ -30,6 +31,7 @@ img {
   Table
 ----------------------------------------------------------------------*/
 caption {
+  font-size: $font-size-display-5;
   font-weight: $font-weight-bold;
   text-align: left;
   margin: $space-stack-default;

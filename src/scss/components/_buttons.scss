@@ -44,7 +44,7 @@
   }
 }
 
-.c-btn-basic {
+.c-btn--basic {
   @extend %button-base;
   background: $color-bg-cta-link;
   color: $color-primary;
@@ -56,7 +56,7 @@
   }
 }
 
-.c-btn-primary {
+.c-btn--primary {
   @extend %button-base;
   background: $color-bg-cta-primary;
   color: $color-text-inverse;

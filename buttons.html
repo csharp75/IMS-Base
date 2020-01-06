@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
-	<title>Default Template</title>
+	<title>Buttons</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="dist/css/styles.css" />
 	<script src="js/modernizr.2.6.2.min.js"></script>
@@ -14,7 +14,19 @@
 
 <body>
 
-<h1>Hello World</h1>
+<button class="c-btn">Button</button>
+<button class="c-btn--primary">Button</button>
+<button class="c-btn--basic">Button</button>
+
+
+<a href="#" class="c-btn--primary">Button</a>
+
+<button class="c-btn">
+    <svg class="icon icon-edit" aria-hidden="true" focusable="false">
+        <use xlink:href="dist/icons/icons-sprite.svg#search-24px"></use>
+    </svg>
+    <span class="sr-only">Search</span>
+</button>
 
 <script href="dist/js/main.js"></script>
 
