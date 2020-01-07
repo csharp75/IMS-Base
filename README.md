@@ -40,3 +40,53 @@ CSS rules are written using the BEM (Block, Element, Modifier) naming convention
 
 Harry Roberts - ['BEMIT: Taking the BEM Naming Convention a Step Further'](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
 
+### BEM SASS
+
+Nested syntax to chain element and modifier properties.
+
+```
+.block {
+  
+  &__element {
+
+    &--modifier {
+
+    }
+  }
+
+  &--modifier {
+
+  }
+}
+```
+
+CSS output:
+```
+.block {}
+.block__element {}
+.block__element--modifier {}
+.block--modifier {}
+```
+
+### BEM HTML
+
+```
+<div class="spaceship spaceship--white">
+  <div class="spaceship__cabin">
+    <h1 class="spaceship__pilot spaceship__pilot--female">
+      Jessica Meir
+    </h1>
+  </div>
+</div>
+```
+
+### NAMESPACING
+
+Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are <b>c-</b>, for Components, <b>o-</b>, for Objects, <b>u-</b>, for Utilities, and <b>is-/has-</b> for States.
+
+```
+<div class="o-media c-user c-user--premium">
+  <img src="" alt="" class="o-media__img c-user__photo  c-avatar" />
+  <p class="o-media__body c-user__bio">...</p>
+</div>
+```
