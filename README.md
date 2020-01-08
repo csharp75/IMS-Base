@@ -94,6 +94,8 @@ Classes are prefixed in a codebase with a certain string in order to explain to 
 
 ## Design Tokens
 
+Design tokens are named entities that store visual design information.
+
 > Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes. We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.
 
 *Salesforce, [Lightning Design System ](https://www.lightningdesignsystem.com/design-tokens/)*
@@ -124,3 +126,66 @@ $color-primary: #169772;
 ```
 
 The [Style Dictionary](https://amzn.github.io/style-dictionary/#/) or [Theo](https://github.com/salesforce-ux/theo) node packages can be used to generate tokens for multiple platforms (iOS, Android etc) if required and the scope of the product expands to provide native apps or other solutions in future.
+
+#### Examples & Useful Links
+- [www.lightningdesignsystem.com/design-tokens/](https://www.lightningdesignsystem.com/design-tokens/)
+- [Adobe Spectrum - Design Tokens](https://spectrum.adobe.com/page/design-tokens/)
+- [Stu Robson: Design Tokens and CSS: Systemising the Design of Components](https://noti.st/sturobson/QIaw2X)
+- [Documenting Design Tokens - Danny Banks](https://dbanks.design/blog/documenting-design-tokens/)
+- [Using Design Tokens - Jina Bolton (Youtube)](https://youtu.be/wDBEc3dJJV8)
+- [Shopify Polaris - Design Tokens](https://shopify.github.io/polaris-tokens/)
+- [Comet, Discovery Education - Tokens](https://comet.discoveryeducation.com/visual-language/tokens.html)
+
+---
+
+## Spacing & Type Scale - 8pt Grid
+
+Spatial systems, grids, and layouts provide rules that give your designs a consistent rhythm, constrain decision making, and help teams stay aligned. 
+
+> A spatial system is a set of rules for how you measure, size, and space your UI elements.
+
+*Figma: Design Systems [Space, Grids, and Layouts](https://www.designsystems.com/space-grids-and-layouts/)*
+
+### The spacial system 
+
+A non-linear scale based on the [8pt Grid System](https://spec.fm/specifics/8-pt-grid) with an occasional half step
+using the default browser font-size of 16px as a memorable base number.
+
+8 / **16** = 0.5rem  
+16 / **16** = 1rem  
+24 / **16** = 1.5rem  
+
+Applying T-Shirt sizes for name labels to create a language that people can remember and apply accurately.
+
+
+| Name             | rem           | px       |
+| ---------------- |---------------| ---------|
+| space-xxs        | 0.125rem      | 2px      |
+| space-xs         | 0.25rem       | 4px      |
+| space-s          | 0.5rem        | 8px      |
+| **space-m**      | **1rem**      | **16px** |
+| space-l          | 1.5rem        | 24px     |
+| space-xl         | 2rem          | 32px     |
+| space-xxl        | 4rem          | 64px     |
+
+#### Reference
+
+[Space in Design Systems](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62) *by Nathan Curtis, Eightshapes*
+
+---
+
+## Utilities (*Beta*)
+
+Utility classes are CSS class names that serve one particular purpose, and are named as such.
+
+```
+.u-border--top {
+  border-top: 1px solid #dfe2ec !important;
+}
+```
+
+>It’s not uncommon to use utility classes within CSS, but on the whole they tend to be used sparingly – at least with well-established methodologies such as BEM and ITCSS.
+
+*Michelle Barker - [A Year of Utility Classes](https://css-irl.info/a-year-of-utility-classes/)*
+
+*Note: wondered if this feature may be useful for devs*
