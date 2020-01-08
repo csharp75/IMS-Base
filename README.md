@@ -40,7 +40,7 @@ CSS rules are written using the BEM (Block, Element, Modifier) naming convention
 
 Harry Roberts - ['BEMIT: Taking the BEM Naming Convention a Step Further'](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
 
-### BEM SASS
+### BEM Sass
 
 Nested syntax to chain element and modifier properties.
 
@@ -80,9 +80,9 @@ CSS output:
 </div>
 ```
 
-### NAMESPACING
+### Namespacing
 
-Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are <b>c-</b>, for Components, <b>o-</b>, for Objects, <b>u-</b>, for Utilities, and <b>is-/has-</b> for States.
+Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are **c-**, for Components, **o-**, for Objects, **u-**, for Utilities, and **is-/has-** for States.
 
 ```
 <div class="o-media c-user c-user--premium">
@@ -90,3 +90,37 @@ Classes are prefixed in a codebase with a certain string in order to explain to 
   <p class="o-media__body c-user__bio">...</p>
 </div>
 ```
+---
+
+## Design Tokens
+
+> Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes. We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.
+
+*Salesforce, [Lightning Design System ](https://www.lightningdesignsystem.com/design-tokens/)*
+
+### Usage
+
+The tokens take the form of key / value pairs written as Sass variables in a partial file and can cover anything from spacing to typography and colour.
+
+```
+_tokens.scss
+
+\\ Colour Palette
+$color-primary: #4d7cfe;
+$color-secondary: #2a4180;
+$color-neutral-dark: #171d24;
+$color-neutral-light: #eaedf4;
+```
+And declared throughout the CSS to develop UI structure and appearance:
+
+```
+.link {
+  color: $color-primary;
+}
+```
+Meaning these values need only be changed once in the tokens file for the style to cascade through entire project. Need to update the primary brand color? Update the color value on the neccesary token:
+```
+$color-primary: #169772;
+```
+
+The [Style Dictionary](https://amzn.github.io/style-dictionary/#/) or [Theo](https://github.com/salesforce-ux/theo) node packages can be used to generate tokens for multiple platforms (iOS, Android etc) if required and the scope of the product expands to provide native apps or other solutions in future.
