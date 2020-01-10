@@ -82,7 +82,7 @@ CSS output:
 
 ### Namespacing
 
-Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are <b>c-</b>, for Components, <b>o-</b>, for Objects, <b>u-</b>, for Utilities, and <b>is-/has-</b> for States.
+Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are `c-`, for Components, `o-`, for Objects, `u-`, for Utilities, and `is-/has-` for States.
 
 ```
 <div class="o-media c-user c-user--premium">
