@@ -1,6 +1,6 @@
 # IMS Base
 
-Management system project starter kit.
+Management system project starter kit. Outlining key principles and processes for an organised, structured front-end codebase.
 
 - NPM scripts
 - SVG icon sprite creation (via Fabrice Weinberg’s [svgstore](https://github.com/FWeinb/grunt-svgstore))
@@ -38,7 +38,7 @@ CSS rules are written using the BEM (Block, Element, Modifier) naming convention
 
 > By combining BEM with the Inverted Triangle CSS architecture we can extend the syntax using Namespacing and other patterns to give it richer meaning across development teams.
 
-Harry Roberts - ['BEMIT: Taking the BEM Naming Convention a Step Further'](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
+*Harry Roberts - ['BEMIT: Taking the BEM Naming Convention a Step Further'](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)*
 
 ### BEM Sass
 
@@ -82,7 +82,7 @@ CSS output:
 
 ### Namespacing
 
-Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are **c-**, for Components, **o-**, for Objects, **u-**, for Utilities, and **is-/has-** for States.
+Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are **c-**, for Components, **o-**, for Objects, **l-**, for layout **u-**, for Utilities, and **is-/has-** for States.
 
 ```
 <div class="o-media c-user c-user--premium">
@@ -168,24 +168,81 @@ Applying T-Shirt sizes for name labels to create a language that people can reme
 | space-xl         | 2rem          | 32px     |
 | space-xxl        | 4rem          | 64px     |
 
+CSS
+
+```
+.container {
+  padding: $space-inset-m;
+}
+```
+
 #### Reference
 
 [Space in Design Systems](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62) *by Nathan Curtis, Eightshapes*
 
 ---
 
+## Sass Helpers (mixins)
+
+There are several Sass **functions** and **mixins** to simplify CSS and 'allow you to define styles that can be re-used throughout your stylesheet'. [sass-lang.com - mixins](https://sass-lang.com/documentation/at-rules/mixin)
+
+### Example - Font size mixin
+
+Convert `px` to `rem` based on the default font-size and include the mixin wherever you need to declare a font-size.
+
+```
+// function
+
+@function rem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
+// mixin
+
+@mixin font-size($size) {
+  font-size: $size; // Fallback in px
+  font-size: rem($size);
+}
+```
+
+#### Sass
+
+```
+h2 {
+  @include font-size(32px);
+}
+```
+#### Output
+
+```
+h2 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+```
+REM based font sizes with a pixel fallback for IE8/9.
+
+---
+
 ## Utilities (*Beta*)
 
-Utility classes are CSS class names that serve one particular purpose, and are named as such.
+Utility classes are single use CSS class names that serve one particular purpose, and are named as such.
 
 ```
 .u-border--top {
   border-top: 1px solid #dfe2ec !important;
 }
 ```
+HTML
+```
+<div class="l-container  u-border--top">
+...
+</div>
+```
 
 >It’s not uncommon to use utility classes within CSS, but on the whole they tend to be used sparingly – at least with well-established methodologies such as BEM and ITCSS.
 
 *Michelle Barker - [A Year of Utility Classes](https://css-irl.info/a-year-of-utility-classes/)*
 
-*Note: wondered if this feature may be useful for devs*
+*Note: Just wondered if this feature may be useful for devs as a remedy/alternative to inline CSS if the temptaton arises. They can be chained in a class on an HTML element in the same way but are different in that even though they are single use their style is stored in the external stylesheet also making them easier to manage site-wide*

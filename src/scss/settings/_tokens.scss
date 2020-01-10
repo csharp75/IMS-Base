@@ -17,6 +17,7 @@ $color-warning: #c28d24;
 
 
 // Background Colours
+$color-bg-base: #fff;
 $color-bg: #f7f8fb;
 $color-bg-tint: #fbfcfd;
 $color-bg-light: #ffffff;
@@ -91,7 +92,7 @@ $color-border: #dfe2ec;
 $font-family: 'Roboto', Helvetica, Arial, sans-serif;
 
 // Line-height
-$font-line-height-normal: 1.5;
+$font-line-height-base: 1.5;
 $font-line-height-headings: 1.25;
 $font-line-height-tight: 1.2;
 $font-line-height-reset: 1;
@@ -110,7 +111,7 @@ $font-size-display-5: 1.25rem; // 20px
 $font-size-display-6: 1rem; // 16px
 $font-size-eyebrow: 0.75rem; // 12px
 
-$font-size-base: 16px;
+$font-size-base: 16px !default;
 $font-size-lead: 1.125rem; // 18px
 $font-size-xxs: 0.625rem; // 10px
 $font-size-xs: 0.75rem; // 12px

@@ -12,7 +12,8 @@
 }
 
 // -----------------------------------------------------------------
-// Calculate Rem Size - http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+// Calculate Rem Size 
+// - http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
 // -----------------------------------------------------------------
 @function rem($size) {
 	$remSize: $size / 16px;

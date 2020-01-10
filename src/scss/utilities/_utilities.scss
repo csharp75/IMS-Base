@@ -336,15 +336,15 @@
 }
 
 // Text Alignment
-.u-text-align--center {
+.u-text--center {
   text-align: center !important;
 }
 
-.u-text-align--left {
+.u-text--left {
   text-align: left !important;
 }
 
-.u-text-align--right {
+.u-text--right {
   text-align: right !important;
 }
 
@@ -362,6 +362,11 @@
   list-style: none;
   padding-left: 0;
 }
+
+// Text Modifications
+.u-uppercase { text-transform: uppercase; }
+.u-lowercase { text-transform: lowercase; }
+.u-capitalize { text-transform: capitalize; }
 
 
 // -----------------------------------------------------------------

@@ -173,8 +173,22 @@
 
 // -----------------------------------------------------------------
 // Rem size with px fallback for IE8 support
+// // - http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
 // -----------------------------------------------------------------
 @mixin font-size($size) {
-  font-size: $size; //Fallback in px
+  font-size: $size; // Fallback in px
   font-size: rem($size);
 }
+// Example:
+//
+// .foo {
+//     @include font-size(32px);
+// }
+// 
+// This will yield:
+// 
+// .foo {
+//     font-size: 32px;
+//     font-size: 2rem;
+// }
+//
