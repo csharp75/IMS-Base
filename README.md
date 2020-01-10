@@ -220,7 +220,7 @@ REM based font sizes with a pixel fallback for IE8/9.
 
 ## Utilities (*Beta*)
 
-Utility classes are CSS class names that serve one particular purpose, and are named as such.
+Utility classes are single use CSS class names that serve one particular purpose, and are named as such.
 
 ```
 .u-border--top {
