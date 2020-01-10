@@ -171,6 +171,8 @@ Applying T-Shirt sizes for name labels to create a language that people can reme
 
 #### Reference
 
+This is a brilliant article re. using a space system to build modular, consistent UI's.
+
 [Space in Design Systems](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62) *by Nathan Curtis, Eightshapes*
 
 ---
@@ -187,8 +189,8 @@ Convert `px` to `rem` based on the default font-size and include the mixin where
 // function
 
 @function rem($size) {
-	$remSize: $size / 16px;
-	@return #{$remSize}rem;
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
 }
 
 // mixin
