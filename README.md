@@ -26,7 +26,7 @@ The project CSS is structured using ITCSS (Inverted Triangle CSS) principles a s
 - **Elements** – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here
 - **Objects** – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
 - **Components** – specific UI components. This is where the majority of our work takes place and our UI components are often composed of Objects and Components
-- **Utilities** – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+- **Trumps** – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
 
 More info - [ITCSS: Scalable and Maintainable CSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
 

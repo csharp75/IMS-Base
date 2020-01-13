@@ -9,7 +9,15 @@ $breakpoints: (
   // Tweakpoints
   'something': 600
 ) !default;
-
+// Usage:
+//
+// .foo {
+//    font-size: 1.8rem;
+//    @include mq(m) {
+//      font-size: 2.4rem;
+//    }
+// }
+// 
 
 // Global animations settings
 $animation-duration: (

@@ -25,50 +25,10 @@ html {
    -webkit-font-smoothing: antialiased; // [5]
 }
 
-// Set base font-size
 body {
     background: $color-bg;
     color: $color-text-default;
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     line-height: $font-line-height-base;
     padding: 2em;
-}
-
-// -----------------------------------------------------------------
-// Images
-// -----------------------------------------------------------------
-// Make images easier to work with
-img {
-  display: block;  
-  max-width: 100%;
-}
-
-svg {
-  height: 1em;
-  width: 1em;
-}
-
-// -----------------------------------------------------------------
-// Table
-// -----------------------------------------------------------------
-caption {
-  font-size: $font-size-display-5;
-  font-weight: $font-weight-bold;
-  text-align: left;
-  margin: $space-stack-default;
-}
-
-table {
-  font-size: $font-size-base;
-  width: 100%;
-  text-align: left;
-  thead,
-  tbody,
-  tfoot {
-    td,
-    th {
-      padding: $space-inset-stretch-s;
-      border-bottom: $border-table;
-    }
-  }
 }

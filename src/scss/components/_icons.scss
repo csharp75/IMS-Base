@@ -1,6 +1,7 @@
-// SVG Icons inherit colour - https://osvaldas.info/keeping-css-short-with-currentcolor
 svg {
-  fill: currentColor;
+  fill: currentColor; // SVG Icons inherit colour - https://osvaldas.info/keeping-css-short-with-currentcolor
+  height: 1em;
+  width: 1em;
 }
 
 .icon-edit {

@@ -3,8 +3,53 @@
 // IMS Management system
 // SCREEN - Core stylesheet
 // Author: Chris Sharp - Furness Internet
-// Last Updated: 02. 02. 2020 - 17:40pm
+// Last Updated: 13. 01. 2020 - 11:48am
 // Copyright: (c) Furness Internet 2020
+
+-------------------------------------------------------------------- */
+/* --------------------------------------------------------------------
+  CONTENTS
+
+  01. SETTINGS
+  Tokens...................Globally available design tokens
+  Variables................Other useful variables
+  Sass-maps................Collection of key/value pairs for use
+
+  02. TOOLS
+  Mixins...................Useful Sass mixins
+  Functions................Useful Sass functions
+  Placeholders.............Selectors that can be extended
+
+  03. GENERIC
+  Reset....................Reset styles. A level playing field
+  Box-sizing...............Better default box-sizing
+
+  04. ELEMENTS
+  Base.....................Styling for bare HTML elements
+  Headings.................Base H1-H6 styles
+  Images...................Base image styles
+  Links....................Hyperlink styles
+  Lists....................Base list element style
+  Table....................Base table styles
+  Typography...............Base type styles
+
+  05. OBJECTS
+  Containers...............Wrapping and structural elements
+  Header...................The main page header
+  Footer...................The main page footer
+  Layout...................Other undecorated structural patterns
+
+  06. COMPONENTS
+  Navigation...............Global nav styles
+  Buttons..................Button elements
+  Tables...................Tables styles
+  Select...................Select input, inc. custom select
+  Checkbox.................Checkbox for forms
+  Icons....................SVG icon styles
+
+  07. TRUMPS
+  Utilities................Single use utility classes
+  Animation................Base animation styles
 
 -------------------------------------------------------------------- */
 
@@ -21,15 +66,19 @@
 @import "./tools/mixins";
 @import "./tools/functions";
 @import "./tools/placeholders";
-@import "./tools/modules";
 
 // 03 - Generic
 @import "./generic/reset";
 @import "./generic/box-sizing";
 
-// 04 - Base.
-@import "./base/base";
-@import "./base/typography";
+// 04 - Elements.
+@import "./elements/base";
+@import "./elements/headings";
+@import "./elements/images";
+@import "./elements/links";
+@import "./elements/lists";
+@import "./elements/table";
+@import "./elements/typography";
 
 // 05 - Objects.
 @import "./objects/containers";
@@ -37,7 +86,7 @@
 @import "./objects/footer";
 @import "./objects/layout";
 
-// 04 - Components.
+// 06 - Components.
 @import "./components/nav";
 @import "./components/buttons";
 @import "./components/tables";
@@ -45,6 +94,6 @@
 @import "./components/checkbox";
 @import "./components/icons";
 
-// 05 - Utilities.
-@import "./utilities/utilities";
-@import "./utilities/animation";
+// 07 - Trumps.
+@import "./trumps/utilities";
+@import "./trumps/animation";

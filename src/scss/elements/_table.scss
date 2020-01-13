@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------
+// Table
+// -----------------------------------------------------------------
+caption {
+  font-size: $font-size-display-5;
+  font-weight: $font-weight-bold;
+  text-align: left;
+  margin: $space-stack-default;
+}
+
+table {
+  font-size: $font-size-base;
+  width: 100%;
+  text-align: left;
+  thead,
+  tbody,
+  tfoot {
+    td,
+    th {
+      padding: $space-inset-stretch-s;
+      border-bottom: $border-table;
+    }
+  }
+}
+
+table th {
+  font-weight: $font-weight-bold;
+}
+
+table th, table td {
+  padding: $space-inset-stretch-m;
+  text-align: left;
+  vertical-align: top;
+}
+
+table thead {
+  border-bottom: 2px solid $color-table-border;
+}
+
+table tbody td,
+table tbody th {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid $color-table-border;
+  }
+}

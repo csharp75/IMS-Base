@@ -5,7 +5,6 @@
 table,
 .c-table {
   border-top: $border-table;
-  width: 100%;
   table-layout: fixed;
   font-size: $font-size-xs;
 
@@ -15,46 +14,9 @@ table,
   }
 }
 
-table caption,
-.c-table caption {
-  font-weight: normal;
-  text-align: left;
-}
-
-table th,
-.c-table th {
-  font-weight: bold;
-}
-
-table th,
 .c-table th,
-table td,
 .c-table td {
   padding: $space-inset-stretch-m;
-  text-align: left;
-  vertical-align: top;
-}
-
-table thead,
-.c-table thead {
-  border-bottom: 2px solid $color-table-border;
-}
-
-table tbody td,
-.c-table thead td,
-table tbody th,
-.c-table thead th {
-  position: relative;
-
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 1px;
-    width: 100%;
-    border-bottom: 1px solid $color-table-border;
-  }
 }
 
 table ul,

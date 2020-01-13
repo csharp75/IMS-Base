@@ -245,11 +245,13 @@ $z-index-sticky: 100;
 // --------------------------------------------------------------------
 // Media Queries
 // --------------------------------------------------------------------
+// Pro Tip: If you set your media queries with EMs instead of PX 
+// browser zooming will also trigger the media query.
 
-$mq-xs: 576px;
-$mq-s: 768px;
-$mq-m: 992px;
-$mq-l: 1200px;
+$mq-xs: 36em; // 576px / 16 = 36em
+$mq-s: 48em; // 768px / 16 = 48em
+$mq-m: 62em; // 992px / 16 = 62em
+$mq-l: 75em; // 1200px / 16 = 75em
 
 // --------------------------------------------------------------------
 // Time
