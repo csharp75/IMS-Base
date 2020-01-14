@@ -1,6 +1,31 @@
 # IMS Base
 
-Management system project starter kit. Outlining key principles and processes for an organised, structured front-end codebase.
+Management system project starter kit. Outlining suggested key principles and processes for an organised, structured front-end codebase.
+
+## Contents
+- [ITCSS](#ITCSS)
+- [BEMIT](#BEMIT)
+  - [BEM Sass](#bem-sass)
+  - [BEM HTML](#bem-html)
+  - [Namespacing](#namespacing)
+- [Sass](#sass)
+  - [Variables](#variables)
+  - [Nesting](#nesting)
+  - [Mixins](#mixins)
+  - [Useful Sass Links](#useful-sass-links)
+- [Design Tokens](#design-tokens)
+  - [Usage](#usage)
+  - [Examples & Useful Links](#examples-and-useful-links)
+- [Spacing & Type Scale](#spacing-&-type-scale)
+  - [The Spatial System](#the-spacial-system)
+  - [Reference Articles](#reference-articles)
+- [Utilities](#utilities)
+
+---
+
+### **Dependencies**
+
+This stuff is just me working out a local environment and automated workflow using node.
 
 - NPM scripts
 - SVG icon sprite creation (via Fabrice Weinberg’s [svgstore](https://github.com/FWeinb/grunt-svgstore))
@@ -18,17 +43,56 @@ Work in progress.
 
 ## ITCSS
 
-The project CSS is structured using ITCSS (Inverted Triangle CSS) principles a scalable and maintainable CSS architecture for large projects. One of the key principles of ITCSS is that it separates your CSS codebase to several sections (called layers), which take the form of the inverted triangle:
+The project CSS is structured using ITCSS (Inverted Triangle CSS) principles a scalable and maintainable CSS architecture for large projects. One of the key principles of ITCSS is that it separates your CSS codebase to several sections (called layers), which take the form of the inverted triangle.
 
-- **Settings** – used with preprocessors and contain font, colors definitions, etc.
-- **Tools** – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
-- **Generic** – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
-- **Elements** – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here
-- **Objects** – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
-- **Components** – specific UI components. This is where the majority of our work takes place and our UI components are often composed of Objects and Components
-- **Trumps** – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+### Generic to Explicit
 
-More info - [ITCSS: Scalable and Maintainable CSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+We start out with the most generic, low-level, catch-all, unremarkable styles, and eventually progress to more explicit and specific rules as we move through the project.
+
+- **01. Settings** – used with preprocessors and contain font, colors definitions, etc.
+- **02. Tools** – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+- **03. Generic** – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+- **04. Elements** – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here
+- **05. Objects** – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+- **06. Components** – specific UI components. This is where the majority of our work takes place and our UI components are often composed of Objects and Components
+- **07. Trumps** – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+
+### Useful Links
+
+- [ITCSS: Scalable and Maintainable CSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+- Creative Bloq - [Manage large CSS projects with ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)
+
+
+### File Structure
+
+```
+dist/
+  css
+    styles.css
+src/
+  scss
+    settings
+      _tokens.scss
+      _variables.scss
+    tools
+      _mixins.scss
+    generic
+      _reset.scss
+    elements
+      _base.scss
+      _headings.scss
+    objects
+      _containers.scss
+    components
+      _buttons.scss
+      _tables.scss
+    trumps
+      _utilities.scss
+
+index.html
+node_modules
+package.json
+```
 
 ---
 
@@ -44,7 +108,7 @@ CSS rules are written using the BEM (Block, Element, Modifier) naming convention
 
 Nested syntax to chain element and modifier properties.
 
-```
+```scss
 .block {
   
   &__element {
@@ -61,7 +125,8 @@ Nested syntax to chain element and modifier properties.
 ```
 
 CSS output:
-```
+
+```css
 .block {}
 .block__element {}
 .block__element--modifier {}
@@ -70,7 +135,7 @@ CSS output:
 
 ### BEM HTML
 
-```
+```html
 <div class="spaceship spaceship--white">
   <div class="spaceship__cabin">
     <h1 class="spaceship__pilot spaceship__pilot--female">
@@ -84,12 +149,124 @@ CSS output:
 
 Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are **c-**, for Components, **o-**, for Objects, **l-**, for layout **u-**, for Utilities, and **is-/has-** for States.
 
-```
+```html
 <div class="o-media c-user c-user--premium">
   <img src="" alt="" class="o-media__img c-user__photo  c-avatar" />
   <p class="o-media__body c-user__bio">...</p>
 </div>
 ```
+---
+
+## Sass
+
+Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS pre-processor can help.
+
+>Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, and other stuff.
+
+### Variables
+
+Sass reduces repetition of CSS and therefore saves time.
+
+```scss
+$color-bg-cta: #4d7cfe;
+
+--
+
+.button {
+  background: $color-bg-cta;
+}
+```
+
+### Nesting
+
+Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.
+
+#### Sass Syntax
+
+```scss
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+```
+#### CSS Output
+
+```css
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+```
+
+### Mixins
+
+There are several Sass **functions** and **mixins** to simplify CSS and 'allow you to define styles that can be re-used throughout your stylesheet'. [sass-lang.com - mixins](https://sass-lang.com/documentation/at-rules/mixin)
+
+#### Font size mixin
+
+Convert `px` to `rem` based on the default font-size and include the mixin wherever you need to declare a font-size.
+
+```scss
+// function
+
+@function rem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
+// mixin
+
+@mixin font-size($size) {
+  font-size: $size; // Fallback in px
+  font-size: rem($size);
+}
+```
+
+#### Sass
+
+```scss
+h2 {
+  @include font-size(32px);
+}
+```
+#### CSS Output
+
+```css
+h2 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+```
+REM based font sizes with a pixel fallback for IE8/9.
+
+### Useful Sass Links
+
+- Sass Basics - [sass-lang.com](https://sass-lang.com/guide)
+- Sass [w3schools.com](https://www.w3schools.com/sass/default.asp)
+- Codestackr (Youtube) - [Learn Sass in 30 minutes](https://youtu.be/BDOzg4lXcSg)
+- freeCodeCamp (Youtube) [Sass Tutorial for Beginners - CSS With Superpowers](https://youtu.be/_a5j7KoflTs)
+
 ---
 
 ## Design Tokens
@@ -104,7 +281,7 @@ Design tokens are named entities that store visual design information.
 
 The tokens take the form of key / value pairs written as Sass variables in a partial file and can cover anything from spacing to typography and colour.
 
-```
+```scss
 _tokens.scss
 
 \\ Colour Palette
@@ -115,19 +292,20 @@ $color-neutral-light: #eaedf4;
 ```
 And declared throughout the CSS to develop UI structure and appearance:
 
-```
+```css
 .link {
   color: $color-primary;
 }
 ```
-Meaning these values need only be changed once in the tokens file for the style to cascade through entire project. Need to update the primary brand color? Update the color value on the neccesary token:
-```
+Meaning these values need only be changed once in the tokens file for the style to cascade through entire project. Need to change the primary brand color? Update the color value on the neccesary token:
+
+```scss
 $color-primary: #169772;
 ```
 
 The [Style Dictionary](https://amzn.github.io/style-dictionary/#/) or [Theo](https://github.com/salesforce-ux/theo) node packages can be used to generate tokens for multiple platforms (iOS, Android etc) if required and the scope of the product expands to provide native apps or other solutions in future.
 
-#### Examples & Useful Links
+### Examples and Useful Links
 - [www.lightningdesignsystem.com/design-tokens/](https://www.lightningdesignsystem.com/design-tokens/)
 - [Adobe Spectrum - Design Tokens](https://spectrum.adobe.com/page/design-tokens/)
 - [Stu Robson: Design Tokens and CSS: Systemising the Design of Components](https://noti.st/sturobson/QIaw2X)
@@ -138,7 +316,7 @@ The [Style Dictionary](https://amzn.github.io/style-dictionary/#/) or [Theo](htt
 
 ---
 
-## Spacing & Type Scale - 8pt Grid
+## Spacing & Type Scale
 
 Spatial systems, grids, and layouts provide rules that give your designs a consistent rhythm, constrain decision making, and help teams stay aligned. 
 
@@ -170,58 +348,16 @@ Applying T-Shirt sizes for name labels to create a language that people can reme
 
 CSS
 
-```
+```scss
 .container {
   padding: $space-inset-m;
 }
 ```
 
-#### Reference
+### Reference Articles
 
-[Space in Design Systems](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62) *by Nathan Curtis, Eightshapes*
-
----
-
-## Sass Helpers (mixins)
-
-There are several Sass **functions** and **mixins** to simplify CSS and 'allow you to define styles that can be re-used throughout your stylesheet'. [sass-lang.com - mixins](https://sass-lang.com/documentation/at-rules/mixin)
-
-### Example - Font size mixin
-
-Convert `px` to `rem` based on the default font-size and include the mixin wherever you need to declare a font-size.
-
-```
-// function
-
-@function rem($size) {
-	$remSize: $size / 16px;
-	@return #{$remSize}rem;
-}
-
-// mixin
-
-@mixin font-size($size) {
-  font-size: $size; // Fallback in px
-  font-size: rem($size);
-}
-```
-
-#### Sass
-
-```
-h2 {
-  @include font-size(32px);
-}
-```
-#### Output
-
-```
-h2 {
-  font-size: 32px;
-  font-size: 2rem;
-}
-```
-REM based font sizes with a pixel fallback for IE8/9.
+- [Space in Design Systems](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62) *by Nathan Curtis, Eightshapes*
+- [Space, Grids & Layouts](https://www.designsystems.com/space-grids-and-layouts/) *Figma: Design Systems*
 
 ---
 
@@ -229,13 +365,13 @@ REM based font sizes with a pixel fallback for IE8/9.
 
 Utility classes are single use CSS class names that serve one particular purpose, and are named as such.
 
-```
+```scss
 .u-border--top {
   border-top: 1px solid #dfe2ec !important;
 }
 ```
 HTML
-```
+```html
 <div class="l-container  u-border--top">
 ...
 </div>
