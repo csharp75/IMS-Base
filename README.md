@@ -231,8 +231,8 @@ Convert `px` to `rem` based on the default font-size and include the mixin where
 // function
 
 @function rem($size) {
-	$remSize: $size / 16px;
-	@return #{$remSize}rem;
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
 }
 
 // mixin
@@ -381,4 +381,4 @@ HTML
 
 *Michelle Barker - [A Year of Utility Classes](https://css-irl.info/a-year-of-utility-classes/)*
 
-*Note: Just wondered if this feature may be useful for devs as a remedy/alternative to inline CSS if the temptaton arises. They can be chained in a class on an HTML element in the same way but are different in that even though they are single use their style is stored in the external stylesheet also making them easier to manage site-wide*
+*Note: Just wondered if this feature may be useful for devs as a remedy/alternative to inline CSS if the temptaton arises. They can be chained in a class on an HTML element in the same way but are different in that even though they are single use their style is stored in the external stylesheet. This also makes them easier to manage site-wide.*
