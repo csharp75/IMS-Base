@@ -148,7 +148,13 @@ CSS output:
 
 ### Namespacing
 
-Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are `c-`, for Components, `o-`, for Objects, `l-`, for layout `u-`, for Utilities, and `is-/has-` for States.
+Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are: 
+
+`c-`, for Components  
+`o-`, for Objects  
+`l-`, for layout  
+`u-`, for Utilities  
+`is-/has-` for States.
 
 ```html
 <div class="o-media c-user c-user--premium">
@@ -180,7 +186,7 @@ _typography.scss
 
 ### Variables
 
-Sass reduces repetition of CSS and therefore saves time.
+Sass reduces repetition of CSS and therefore saves time. A variable consists of a property and corresponding value:
 
 ```scss
 $color-bg-cta: #4d7cfe;
@@ -313,7 +319,7 @@ And declared throughout the CSS to develop UI structure and appearance:
   color: $color-primary;
 }
 ```
-Meaning these values need only be changed once in the tokens file for the style to cascade through entire project. Need to change the primary brand color? Update the color value on the neccesary token:
+Meaning these values need only be changed once in the tokens file for the style to cascade through the entire project. Need to change the primary brand color? Update the color value on the neccesary token to update every instance of `$color-primary` project wide:
 
 ```scss
 $color-primary: #169772;
@@ -362,7 +368,7 @@ Applying T-Shirt sizes for name labels to create a language that people can reme
 | space-xl         | 2rem          | 32px     |
 | space-xxl        | 4rem          | 64px     |
 
-CSS
+#### CSS
 
 ```scss
 .container {
@@ -381,12 +387,16 @@ CSS
 
 Utility classes are single use CSS class names that serve one particular purpose, and are named as such.
 
+#### CSS
 ```scss
 .u-border--top {
   border-top: 1px solid #dfe2ec !important;
 }
 ```
-HTML
+Note the use of an `!important` statement which is non-destructive in this context and ensures this rule takes priority over all others
+
+#### HTML
+
 ```html
 <div class="l-container  u-border--top">
 ...
