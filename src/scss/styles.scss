@@ -58,42 +58,42 @@
 // --------------------------------------------------------------------
 
 // 01 - Settings.
-@import "./settings/tokens";
-@import "./settings/variables";
-@import "./settings/sass-maps";
+@import "./01-Settings/tokens";
+@import "./01-Settings/variables";
+@import "./01-Settings/sass-maps";
 
 // 02 - Tools.
-@import "./tools/mixins";
-@import "./tools/functions";
-@import "./tools/placeholders";
+@import "./02-Tools/mixins";
+@import "./02-Tools/functions";
+@import "./02-Tools/placeholders";
 
 // 03 - Generic
-@import "./generic/reset";
-@import "./generic/box-sizing";
+@import "./03-Generic/reset";
+@import "./03-Generic/box-sizing";
 
 // 04 - Elements.
-@import "./elements/base";
-@import "./elements/headings";
-@import "./elements/images";
-@import "./elements/links";
-@import "./elements/lists";
-@import "./elements/table";
-@import "./elements/typography";
+@import "./04-Elements/base";
+@import "./04-Elements/headings";
+@import "./04-Elements/images";
+@import "./04-Elements/links";
+@import "./04-Elements/lists";
+@import "./04-Elements/table";
+@import "./04-Elements/typography";
 
 // 05 - Objects.
-@import "./objects/containers";
-@import "./objects/header";
-@import "./objects/footer";
-@import "./objects/layout";
+@import "./05-Objects/containers";
+@import "./05-Objects/header";
+@import "./05-Objects/footer";
+@import "./05-Objects/layout";
 
 // 06 - Components.
-@import "./components/nav";
-@import "./components/buttons";
-@import "./components/tables";
-@import "./components/select";
-@import "./components/checkbox";
-@import "./components/icons";
+@import "./06-Components/nav";
+@import "./06-Components/buttons";
+@import "./06-Components/tables";
+@import "./06-Components/select";
+@import "./06-Components/checkbox";
+@import "./06-Components/icons";
 
 // 07 - Trumps.
-@import "./trumps/utilities";
-@import "./trumps/animation";
+@import "./07-Trumps/utilities";
+@import "./07-Trumps/animation";
