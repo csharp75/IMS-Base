@@ -89,14 +89,16 @@ src/
       _tables.scss
     07-Trumps
       _utilities.scss
-    
     styles.scss
-
 index.html
 node_modules
 package.json
 ```
-Partial files (Eg: `_utilities.scss`) are imported into a `styles.scss`.
+Partial files (Eg: `_base.scss`) are imported into a [styles.scss](https://github.com/csharp75/IMS-Base/blob/master/src/scss/styles.scss).
+
+```
+@import "./04-Elements/base";
+```
 
 ---
 
@@ -386,7 +388,7 @@ Applying T-Shirt sizes for name labels to create a language that people can reme
 
 ---
 
-## Utilities (*Beta*)
+## Utilities
 
 Utility classes are single use CSS class names that serve one particular purpose, and are named as such.
 
