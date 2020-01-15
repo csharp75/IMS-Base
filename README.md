@@ -150,10 +150,10 @@ CSS output:
 
 Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are: 
 
-`c-`, for Components  
-`o-`, for Objects  
-`l-`, for layout  
-`u-`, for Utilities  
+`c-` for Components  
+`o-` for Objects  
+`l-` for layout  
+`u-` for Utilities  
 `is-/has-` for States.
 
 ```html
