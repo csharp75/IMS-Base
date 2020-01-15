@@ -89,11 +89,14 @@ src/
       _tables.scss
     07-Trumps
       _utilities.scss
+    
+    styles.scss
 
 index.html
 node_modules
 package.json
 ```
+Partial files (Eg: `_utilities.scss`) are imported into a `styles.scss`.
 
 ---
 
