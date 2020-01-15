@@ -72,22 +72,22 @@ dist/
     styles.css
 src/
   scss
-    settings
+    01-Settings
       _tokens.scss
       _variables.scss
-    tools
+    02-Tools
       _mixins.scss
-    generic
+    03-Generic
       _reset.scss
-    elements
+    04-Elements
       _base.scss
       _headings.scss
-    objects
+    05-Objects
       _containers.scss
-    components
+    06-Components
       _buttons.scss
       _tables.scss
-    trumps
+    07-Trumps
       _utilities.scss
 
 index.html
