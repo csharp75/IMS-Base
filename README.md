@@ -354,7 +354,7 @@ Spatial systems, grids, and layouts provide rules that give your designs a consi
 
 *Figma: Design Systems [Space, Grids, and Layouts](https://www.designsystems.com/space-grids-and-layouts/)*
 
-### The spacial system 
+### The Spacial System 
 
 A non-linear scale based on the [8pt Grid System](https://spec.fm/specifics/8-pt-grid) with an occasional half step
 using the default browser font-size of 16px as a memorable base number.
@@ -415,4 +415,4 @@ Note the use of an `!important` statement which is non-destructive in this conte
 
 *Michelle Barker - [A Year of Utility Classes](https://css-irl.info/a-year-of-utility-classes/)*
 
-*Note: Just wondered if this feature may be useful for devs as a remedy/alternative to inline CSS if the temptaton arises. They can be chained in a class on an HTML element in the same way but are different in that even though they are single use their style is stored in the external stylesheet. This also makes them easier to manage site-wide.*
+*Note: Just wondered if this feature may be useful for devs as a remedy/alternative to inline CSS if the temptation arises. They can be chained in a class on an HTML element in the same way but are different in that even though they are single use their style is stored in the external stylesheet. This also makes them easier to manage site-wide.*
