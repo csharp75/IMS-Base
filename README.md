@@ -367,7 +367,7 @@ Applying T-Shirt sizes for name labels to create a language that people can reme
 
 
 | Name             | rem           | px       |
-| ---------------- |---------------| ---------|
+| :--------------- |:--------------| :--------|
 | space-xxs        | 0.125rem      | 2px      |
 | space-xs         | 0.25rem       | 4px      |
 | space-s          | 0.5rem        | 8px      |
