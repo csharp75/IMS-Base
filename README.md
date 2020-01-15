@@ -8,11 +8,12 @@ Management system project starter kit. Outlining suggested key principles and pr
   - [BEM Sass](#bem-sass)
   - [BEM HTML](#bem-html)
   - [Namespacing](#namespacing)
+    - [Useful BEM Links](#useful-bem-links)
 - [Sass](#sass)
   - [Variables](#variables)
   - [Nesting](#nesting)
   - [Mixins](#mixins)
-  - [Useful Sass Links](#useful-sass-links)
+    - [Useful Sass Links](#useful-sass-links)
 - [Design Tokens](#design-tokens)
   - [Usage](#usage)
   - [Examples & Useful Links](#examples-and-useful-links)
@@ -155,6 +156,14 @@ Classes are prefixed in a codebase with a certain string in order to explain to 
   <p class="o-media__body c-user__bio">...</p>
 </div>
 ```
+
+### Useful BEM Links
+
+- [MindBEMding – getting your head ’round BEM syntax](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) - *Harry Roberts, CSS Wizardry*
+- ['BEMIT: Taking the BEM Naming Convention a Step Further'](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/) - *Harry Roberts, CSS Wizardry*
+- [More Transparent UI Code with Namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/) - *Harry Roberts, CSS Wizardry*
+
+
 ---
 
 ## Sass
@@ -266,6 +275,7 @@ REM based font sizes with a pixel fallback for IE8/9.
 - Sass [w3schools.com](https://www.w3schools.com/sass/default.asp)
 - Codestackr (Youtube) - [Learn Sass in 30 minutes](https://youtu.be/BDOzg4lXcSg)
 - freeCodeCamp (Youtube) [Sass Tutorial for Beginners - CSS With Superpowers](https://youtu.be/_a5j7KoflTs)
+- [Sass for Web Designers](https://www.dropbox.com/s/cfeugibds7aaaej/Sass%20for%20Web%20Designers.pdf?dl=0) (PDF) - Dan Cederholm, A Book Apart
 
 ---
 
