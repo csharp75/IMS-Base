@@ -4,6 +4,8 @@ Management system project starter kit. Outlining suggested key principles and pr
 
 ## Contents
 - [ITCSS](#ITCSS)
+  - [File Structure](#file-structure)
+  - [Useful Links](#useful-itcss-links)
 - [BEMIT](#BEMIT)
   - [BEM Sass](#bem-sass)
   - [BEM HTML](#bem-html)
@@ -58,11 +60,6 @@ We start out with the most generic, low-level, catch-all, unremarkable styles, a
 - **06. Components** – specific UI components. This is where the majority of our work takes place and our UI components are often composed of Objects and Components
 - **07. Trumps** – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
 
-### Useful Links
-
-- [ITCSS: Scalable and Maintainable CSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
-- Creative Bloq - [Manage large CSS projects with ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)
-
 
 ### File Structure
 
@@ -99,6 +96,11 @@ Partial files (Eg: `_base.scss`) are imported into a [styles.scss](https://githu
 ```
 @import "./04-Elements/base";
 ```
+
+### Useful ITCSS Links
+
+- [ITCSS: Scalable and Maintainable CSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+- Creative Bloq - [Manage large CSS projects with ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)
 
 ---
 
