@@ -175,6 +175,7 @@ Classes are prefixed in a codebase with a certain string in order to explain to 
 - [MindBEMding – getting your head ’round BEM syntax](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) - *Harry Roberts, CSS Wizardry*
 - ['BEMIT: Taking the BEM Naming Convention a Step Further'](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/) - *Harry Roberts, CSS Wizardry*
 - [More Transparent UI Code with Namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/) - *Harry Roberts, CSS Wizardry*
+- [Battling BEM CSS: 10 Common Problems And How To Avoid Them](https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/) - *Smashing Magazine*
 
 
 ---
