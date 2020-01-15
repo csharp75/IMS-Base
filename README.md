@@ -148,7 +148,7 @@ CSS output:
 
 ### Namespacing
 
-Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are **c-**, for Components, **o-**, for Objects, **l-**, for layout **u-**, for Utilities, and **is-/has-** for States.
+Classes are prefixed in a codebase with a certain string in order to explain to developers what kind of job it does. The most common types of namespace are `c-`, for Components, `o-`, for Objects, `l-`, for layout `u-`, for Utilities, and `is-/has-` for States.
 
 ```html
 <div class="o-media c-user c-user--premium">
@@ -171,6 +171,12 @@ Classes are prefixed in a codebase with a certain string in order to explain to 
 Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS pre-processor can help.
 
 >Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, and other stuff.
+
+A Sass CSS file has the extention of `.scss`. It is compiled into regular, 'vanilla' CSS when saved. Eg: `css/style.css`
+
+```
+_typography.scss
+```
 
 ### Variables
 
