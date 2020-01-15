@@ -5,7 +5,7 @@ Management system project starter kit. Outlining suggested key principles and pr
 ## Contents
 - [ITCSS](#ITCSS)
   - [File Structure](#file-structure)
-  - [Useful Links](#useful-itcss-links)
+  - [Useful ITCSS Links](#useful-itcss-links)
 - [BEMIT](#BEMIT)
   - [BEM Sass](#bem-sass)
   - [BEM HTML](#bem-html)
