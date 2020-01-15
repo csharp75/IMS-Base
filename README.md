@@ -216,7 +216,7 @@ nav {
 
   a {
     display: block;
-    padding: 6px 12px;
+    padding: 0.5rem 1rem;
     text-decoration: none;
   }
 }
@@ -234,7 +234,7 @@ nav li {
 }
 nav a {
   display: block;
-  padding: 6px 12px;
+  padding: 0.5rem 1rem;
   text-decoration: none;
 }
 
@@ -242,7 +242,7 @@ nav a {
 
 ### Mixins
 
-There are several Sass **functions** and **mixins** to simplify CSS and 'allow you to define styles that can be re-used throughout your stylesheet'. [sass-lang.com - mixins](https://sass-lang.com/documentation/at-rules/mixin)
+There are several Sass **functions** and **mixins** included to simplify CSS and 'allow you to define styles that can be re-used throughout your stylesheet'. [sass-lang.com - mixins](https://sass-lang.com/documentation/at-rules/mixin)
 
 #### Font size mixin
 
@@ -252,7 +252,7 @@ Convert `px` to `rem` based on the default font-size and include the mixin where
 // function
 
 @function rem($size) {
-  $remSize: $size / 16px;
+  $remSize: $size / 16px; // Target font-size divided by the base font-size
   @return #{$remSize}rem;
 }
 
@@ -319,7 +319,7 @@ And declared throughout the CSS to develop UI structure and appearance:
   color: $color-primary;
 }
 ```
-Meaning these values need only be changed once in the tokens file for the style to cascade through the entire project. Need to change the primary brand color? Update the color value on the neccesary token to update every instance of `$color-primary` project wide:
+Meaning these values need only be changed once in the tokens file for the style to cascade through the entire project. Need to change the primary brand color? Update the color value on the neccesary token to affect every instance of `$color-primary` project wide:
 
 ```scss
 $color-primary: #169772;
@@ -393,7 +393,7 @@ Utility classes are single use CSS class names that serve one particular purpose
   border-top: 1px solid #dfe2ec !important;
 }
 ```
-Note the use of an `!important` statement which is non-destructive in this context and ensures this rule takes priority over all others
+Note the use of an `!important` statement which is non-destructive in this context and ensures this rule takes priority over all others.
 
 #### HTML
 
