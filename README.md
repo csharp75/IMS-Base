@@ -336,6 +336,8 @@ $color-primary: #169772;
 The [Style Dictionary](https://amzn.github.io/style-dictionary/#/) or [Theo](https://github.com/salesforce-ux/theo) node packages can be used to generate tokens for multiple platforms (iOS, Android etc) if required and the scope of the product expands to provide native apps or other solutions in future.
 
 ### Examples and Useful Links
+
+- [Design Tokens and Component Based Design - 24ways.org](https://24ways.org/2019/design-tokens-and-component-based-design/)
 - [www.lightningdesignsystem.com/design-tokens/](https://www.lightningdesignsystem.com/design-tokens/)
 - [Using design tokens to promote collaboration and maintainability of a design system](https://thibault.mahe.io/blog/design-tokens)
 - [Adobe Spectrum - Design Tokens](https://spectrum.adobe.com/page/design-tokens/)
