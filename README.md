@@ -337,6 +337,7 @@ The [Style Dictionary](https://amzn.github.io/style-dictionary/#/) or [Theo](htt
 
 ### Examples and Useful Links
 - [www.lightningdesignsystem.com/design-tokens/](https://www.lightningdesignsystem.com/design-tokens/)
+- [Using design tokens to promote collaboration and maintainability of a design system](https://thibault.mahe.io/blog/design-tokens)
 - [Adobe Spectrum - Design Tokens](https://spectrum.adobe.com/page/design-tokens/)
 - [Stu Robson: Design Tokens and CSS: Systemising the Design of Components](https://noti.st/sturobson/QIaw2X)
 - [Documenting Design Tokens - Danny Banks](https://dbanks.design/blog/documenting-design-tokens/)
@@ -356,7 +357,7 @@ Spatial systems, grids, and layouts provide rules that give your designs a consi
 
 ### The Spacial System 
 
-A non-linear scale based on the [8pt Grid System](https://spec.fm/specifics/8-pt-grid) with an occasional half step
+A linear scale based on the [8pt Grid System](https://spec.fm/specifics/8-pt-grid) with an occasional half step
 using the default browser font-size of 16px as a memorable base number.
 
 8 / **16** = 0.5rem  
@@ -374,7 +375,7 @@ Applying T-Shirt sizes for name labels to create a language that people can reme
 | **space-m**      | **1rem**      | **16px** |
 | space-l          | 1.5rem        | 24px     |
 | space-xl         | 2rem          | 32px     |
-| space-xxl        | 4rem          | 64px     |
+| space-xxl        | 2.5rem        | 40px     |
 
 #### CSS
 
