@@ -338,6 +338,7 @@ The [Style Dictionary](https://amzn.github.io/style-dictionary/#/) or [Theo](htt
 ### Examples and Useful Links
 
 - [Design Tokens and Component Based Design - 24ways.org](https://24ways.org/2019/design-tokens-and-component-based-design/)
+- [Awesome Design Tokens - Repo of tools, articles, examples](https://github.com/sturobson/Awesome-Design-Tokens/blob/master/README.md)
 - [www.lightningdesignsystem.com/design-tokens/](https://www.lightningdesignsystem.com/design-tokens/)
 - [Using design tokens to promote collaboration and maintainability of a design system](https://thibault.mahe.io/blog/design-tokens)
 - [Adobe Spectrum - Design Tokens](https://spectrum.adobe.com/page/design-tokens/)
