@@ -154,7 +154,7 @@ $space-inset-xxl: 2.5rem; // 40px
 // Inset Squish
 $space-inset-squish-xs: 0.25rem 0.5rem; // 4px - 8px
 $space-inset-squish-s: 0.375rem 0.75rem; // 6px - 12px
-$space-inset-squish-m: 0.5rem 1rem; // 8px - 16px
+$space-inset-squish-m: 0.5rem 1rem !default; // 8px - 16px
 $space-inset-squish-l: 0.75rem 1.5rem; // 12px - 24px
 $space-inset-squish-xl: 1rem 2rem; // 16px - 32px
 

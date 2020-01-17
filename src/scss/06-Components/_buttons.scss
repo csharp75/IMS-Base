@@ -5,6 +5,7 @@
 %button-base {
   @include animation(#{background-color, border-color}, fast, in);
   @include focus;
+  /*@include text-crop;*/
   background: transparent;
   border: none;
   border-radius: $border-radius-m;
@@ -13,9 +14,9 @@
   font-size: $font-size-s;
   font-weight: $font-weight-regular;
   justify-content: center;
-  line-height: $font-line-height-reset;
+  
   margin: 0 0 $space-stack-m 0;
-  padding: $space-inset-squish-l;
+  padding: $space-inset-squish-m;
   text-align: center;
   text-decoration: none;
 

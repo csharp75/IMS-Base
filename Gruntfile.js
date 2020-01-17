@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       },
       default : {
         files: {
-          'dist/icons/icons-sprite.svg': ['icons/*.svg'],
+          'dist/icons/icons-sprite.svg': ['src/icons/*.svg'],
         },
       },
     },
