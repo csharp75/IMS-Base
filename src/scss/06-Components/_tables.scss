@@ -4,19 +4,21 @@
 
 table,
 .c-table {
-  border-top: $border-table;
+  background: $color-bg-base;
+  /*border-top: $border-table;*/
+  border-radius: $border-radius-m;
   table-layout: fixed;
   font-size: $font-size-xs;
 
   @media (--mq-medium) {
-    font-size: $font-size-s;
+    font-size: $font-size-m;
     margin-bottom: $space-stack-m;
   }
 }
 
 .c-table th,
 .c-table td {
-  padding: $space-inset-stretch-m;
+  padding: $space-inset-m;
 }
 
 table ul,
@@ -29,8 +31,6 @@ table ul,
   @media (max-width: 46.875em) {
     padding-top: $space-inset-s;
     padding-bottom: $space-inset-s;
-    padding-right: 0;
-    padding-left: 0;
     text-align: left;
   }
 }
