@@ -38,15 +38,6 @@ table thead {
 
 table tbody td,
 table tbody th {
+  border-top: 1px solid $color-table-border;
   position: relative;
-
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 1px;
-    width: 100%;
-    border-bottom: 1px solid $color-table-border;
-  }
 }

@@ -479,18 +479,8 @@ table thead {
 
 table tbody td,
 table tbody th {
+  border-top: 1px solid #dfe2ec;
   position: relative;
-}
-
-table tbody td:after,
-table tbody th:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 1px;
-  width: 100%;
-  border-bottom: 1px solid #dfe2ec;
 }
 
 .o-container, .o-container-full {
@@ -607,7 +597,7 @@ table,
 
 .c-table th,
 .c-table td {
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 table ul,
@@ -652,7 +642,6 @@ table ul,
   .c-table--responsive tbody th {
     border-bottom: 2px solid #dfe2ec;
     display: block;
-    /*border-top: 2px solid $color-table-border;*/
     font-size: 1rem;
     margin-top: 1rem;
   }
@@ -677,6 +666,13 @@ table ul,
     width: 40%;
     display: inline-block;
   }
+}
+
+.c-table--responsive tbody td.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 46.875em) {
@@ -707,6 +703,13 @@ table ul,
   .c-table__header {
     padding: 1rem 0.5rem 0.8rem 0.5rem;
   }
+}
+
+/* --------------------------------------------------------------------
+  Stiped Table
+----------------------------------------------------------------------*/
+.table--striped tr:nth-child(even) {
+  background: #f7f8fb;
 }
 
 /* --------------------------------------------------------------------

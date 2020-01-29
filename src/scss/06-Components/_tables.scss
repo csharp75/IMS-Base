@@ -18,7 +18,7 @@ table,
 
 .c-table th,
 .c-table td {
-  padding: $space-inset-m;
+  padding: $space-inset-s;
 }
 
 table ul,
@@ -63,7 +63,6 @@ table ul,
   @media (max-width: 46.875em) {
     border-bottom: 2px solid $color-table-border;
     display: block;
-    /*border-top: 2px solid $color-table-border;*/
     font-size: $font-size-m;
     margin-top: $space-m;
   }
@@ -89,6 +88,13 @@ table ul,
       display: inline-block;
     }
   }
+}
+
+.c-table--responsive tbody td.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .c-table--responsive tbody th::after {
@@ -117,4 +123,11 @@ table ul,
   @media (max-width: 46.875em) {
     padding: 1rem 0.5rem 0.8rem 0.5rem;
   }
+}
+
+/* --------------------------------------------------------------------
+  Stiped Table
+----------------------------------------------------------------------*/
+.table--striped tr:nth-child(even) {
+  background: $color-bg;
 }

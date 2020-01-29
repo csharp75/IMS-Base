@@ -1,6 +1,6 @@
-# IMS Base
+# Front-end Base
 
-Management system project starter kit. Outlining suggested key principles and processes for an organised, structured front-end codebase.
+Project starter kit outlining suggested key principles and approach to processes for an organised, structured front-end codebase.
 
 ## Contents
 - [ITCSS](#ITCSS)
@@ -28,7 +28,7 @@ Management system project starter kit. Outlining suggested key principles and pr
 
 ### **Dependencies**
 
-This stuff is just me working out a local environment and automated workflow using node.
+This stuff is just me working out a local environment and automated workflow using node packages.
 
 - NPM scripts
 - SVG icon sprite creation (via Fabrice Weinberg’s [svgstore](https://github.com/FWeinb/grunt-svgstore))
