@@ -386,7 +386,25 @@ body {
   background: #f7f8fb;
   color: rgba(19, 41, 63, 0.8);
   line-height: 1.5;
-  padding: 2em;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.assistive-text {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  white-space: nowrap;
 }
 
 /*
@@ -438,6 +456,7 @@ h1, h2, h3, h4, h5, h6 {
 
 img {
   display: block;
+  height: auto;
   max-width: 100%;
 }
 
@@ -499,17 +518,17 @@ table tbody th {
   /*padding: $space-l;*/
 }
 
-.site-header {
-  padding: 2rem;
-  font-size: 1.8rem;
-  z-index: 100;
-}
-
-@media only screen and (min-width: 62em) {
-  .site-header {
-    padding-top: 4rem;
-    font-size: 2.4rem;
+.global-header-container {
+  background: #fff;
+  box-shadow: 0 1px 0 0 #ebf0f2;
+  height: 60px;
+  /*
+  @include mq('m') {
+      padding-top: 4rem;
+      font-size: 2.4rem;
   }
+  */
+  z-index: 100;
 }
 
 /* --------------------------------------------------------------------

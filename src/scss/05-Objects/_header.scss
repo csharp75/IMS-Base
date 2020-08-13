@@ -1,9 +1,12 @@
-.site-header {
-  padding: 2rem;
-  font-size: 1.8rem;
+.global-header-container {
+  background: $color-bg-base;
+  box-shadow: $shadow-xs;
+  height: 60px;
+  /*
   @include mq('m') {
       padding-top: 4rem;
       font-size: 2.4rem;
   }
+  */
   z-index: z(sticky);
 }
